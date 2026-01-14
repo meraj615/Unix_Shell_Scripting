@@ -1095,3 +1095,208 @@ Next line
 Next line
 Next line
 ```
+
+
+### sed – Stream Editor ###
+
+### `sed 's/old/new/'`
+**Purpose:** Replaces the first occurrence of old with new in each line.
+
+```bash
+sed 's/old/new/' file_name
+```
+**Output:** 
+```
+This is new text
+old value remains here
+```
+
+### `sed 's/old/new/g'`
+**Purpose:** Replaces all occurrences of old with new in each line
+
+```bash
+sed 's/old/new/g' file_name
+```
+**Output:** 
+```
+new value new value
+```
+
+
+### `sed 's/old/new/2'`
+**Purpose:** Replaces only the second occurrence of old in each line.
+```bash
+sed 's/old/new/2' file_name
+```
+**Output:** 
+```
+old new old
+```
+
+
+### `sed 's/old/new/gI'`
+**Purpose:** Replaces all occurrences case-insensitively.
+
+```bash
+sed 's/old/new/gI' file_name
+```
+**Output:** 
+```
+new NEW new
+```
+
+### `sed -i 's/old/new/g'`
+**Purpose:** Replaces text in the file itself (in-place edit).
+```bash
+sed -i 's/old/new/g' file_name
+```
+**Output:** 
+```
+No output File modified directly
+```
+
+
+### `sed -n '5p'`
+**Purpose:** Prints only line 5 of the file.
+
+```bash
+sed -n '5p' file_name
+```
+**Output:** 
+```
+This is line 5
+```
+
+### `sed -n '1,10p'`
+**Purpose:** Prints lines 1 through 10.
+
+```bash
+sed -n '1,10p' file_name
+```
+**Output:** 
+```
+Line 1
+Line 2
+...
+Line 10
+```
+
+
+### `sed '5d'`
+**Purpose:** Deletes line 5 from the output.
+
+```bash
+sed '5d' file_name
+```
+**Output:** 
+```
+Line 1
+Line 2
+Line 3
+Line 4
+Line 6
+```
+
+
+### `sed '1,10d'`
+**Purpose:** Deletes lines 1 through 10.
+
+```bash
+sed '1,10d' file_name
+```
+**Output:** 
+```
+Line 11
+Line 12
+```
+
+### `sed '/pattern/d'`
+**Purpose:** Deletes lines that match a pattern.
+```bash
+sed '/pattern/d' file_name
+```
+**Output:** 
+```
+Lines without pattern
+```
+
+
+### `sed '/pattern/p'`
+**Purpose:** Prints lines matching the pattern along with all lines.
+
+```bash
+sed '/pattern/p' file_name
+```
+**Output:** 
+```
+Normal line
+pattern line
+pattern line
+```
+
+### `sed -n '/pattern/p'`
+**Purpose:** Prints only lines that match the pattern.
+```bash
+sed -n '/pattern/p' file_name
+```
+**Output:** 
+```
+pattern found here
+```
+
+
+### `sed 's/^/START-/'`
+**Purpose:** Adds text at the beginning of each line.
+```bash
+sed 's/^/START-/' file_name
+```
+**Output:** 
+```
+START-Line one
+START-Line two
+```
+
+### `sed 's/$/-END/'`
+**Purpose:** Adds text at the end of each line.
+```bash
+sed 's/$/-END/' file_name
+```
+**Output:** 
+```
+Line one-END
+Line two-END
+```
+
+
+### `sed 's/[0-9]//g'`
+**Purpose:** Removes all digits from the file output.
+
+```bash
+sed 's/[0-9]//g' file_name
+```
+**Output:** 
+```
+Order number 
+```
+
+### `sed 's/^[[:space:]]*//'`
+**Purpose:** Removes leading spaces from each line.
+```bash
+sed 's/^[[:space:]]*//' file_name
+```
+**Output:** 
+```
+Text without leading spaces
+```
+
+
+### `sed 's/[[:space:]]*$//'`
+**Purpose:** Removes trailing spaces from each line.
+
+```bash
+sed 's/[[:space:]]*$//' file_name
+```
+**Output:** 
+```
+Text without trailing spaces
+```
