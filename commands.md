@@ -179,3 +179,74 @@ mkdir dir_name
 rmdir dir_name
 ```
 
+### File Creation & Copy Commands ###
+
+### `touch`
+**Purpose:** Creates an empty file or updates the timestamp of an existing file.
+
+```bash
+touch file_name
+```
+
+### `touch file1 file2`
+**Purpose:** Creates multiple empty files at once.
+
+```bash
+touch file1 file2
+```
+
+### `cp`
+**Purpose:** Copies a file to another file.
+
+```bash
+cp file1 file2
+```
+
+### `cp file1 dir1`
+**Purpose:** Copies a file into a directory.
+
+```bash
+cp file1 dir1
+```
+
+### `cp file1 file2 file3 dir1`
+**Purpose:** Copies multiple files into a directory.
+
+```bash
+cp file1 file2 file3 dir1
+```
+
+### `cp -r1`
+**Purpose:** Copies a directory recursively.
+
+```bash
+cp -r dir1 dir2
+```
+
+### `cp -i`
+**Purpose:** Prompts before overwriting an existing file.
+
+```bash
+cp -i file1 file2
+```
+
+### `cp -u`
+**Purpose:** Copies only when the source file is newer than the destination.
+
+```bash
+cp -u file1 file2
+```
+
+### `cp -a`
+**Purpose:** Copies directories while preserving permissions, ownership, and timestamps.
+
+```bash
+cp -a dir1 dir2
+```
+
+### `cp -rf`
+**Purpose:** Forces recursive copy and overwrites existing files without prompt.
+
+```bash
+cp -rf dir1 dir2
+```
