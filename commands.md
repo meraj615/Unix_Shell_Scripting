@@ -1300,3 +1300,90 @@ sed 's/[[:space:]]*$//' file_name
 ```
 Text without trailing spaces
 ```
+
+
+### awk – Pattern Scanning & Processing Language ###
+
+### `awk '{print}'`
+**Purpose:** Prints every line of the file.
+```bash
+sed 's/old/new/' file_name
+```
+**Output:** 
+```
+John 25 USA
+Alice 30 UK
+```
+
+### `awk '{print $1}'`
+**Purpose:** Prints the first column of each line
+
+```bash
+awk '{print $1}' file_name
+```
+**Output:** 
+```
+John
+Alice
+```
+
+
+### `awk '{print $1,$2}'`
+**Purpose:** Prints the first and second columns.
+```bash
+awk '{print $1,$2}' file_name
+```
+**Output:** 
+```
+John 25
+Alice 30
+```
+
+
+### `awk '{print NR,$0}'`
+**Purpose:** Prints line numbers along with each line.
+
+```bash
+awk '{print NR,$0}' file_name
+```
+**Output:** 
+```
+1 John 25 USA
+2 Alice 30 UK
+```
+
+### `awk -F',' '{print $1}'`
+**Purpose:** Uses comma as the field separator and prints the first field.
+```bash
+awk -F',' '{print $1}' file_name
+```
+**Output:** 
+```
+John
+Alice
+```
+
+
+### `awk '/pattern/ {print}'`
+**Purpose:** Prints lines that match a specific pattern.
+
+```bash
+awk '/pattern/ {print}' file_name
+```
+**Output:** 
+```
+This line contains pattern
+```
+
+### `awk '{sum+=$1} END {print sum}'`
+**Purpose:** Calculates and prints the sum of values in the first column.
+
+```bash
+awk '{sum+=$1} END {print sum}' file_name
+```
+**Output:** 
+```
+150
+```
+
+
