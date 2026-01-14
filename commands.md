@@ -8,7 +8,7 @@
 uname -a
 ```
 
-**Sample Output:** 
+**Output:** 
 ```
   Linux server01 5.15.0-91-generic #101-Ubuntu SMP x86_64 GNU/Linux
 ```
@@ -19,7 +19,7 @@ uname -a
 ```bash
 whoami
 ```
-**Sample Output:**
+**Output:**
 ```
 jithendra
 ```
@@ -30,7 +30,7 @@ jithendra
 ```bash
 hostname
 ```
-**Sample Output:**
+**Output:**
 ```
 server01
 ```
@@ -53,7 +53,7 @@ Tue Jan 13 14:05:22 EST 2026
 ```bash
 uptime
 ```
-**Sample Output:**
+**Output:**
 ```
 14:05:30 up 12 days, 4:32, 2 users, load average: 0.15, 0.10, 0.08
 ```
@@ -67,7 +67,7 @@ uptime
 ```bash
 pwd
 ```
-**Sample Output:**
+**Output:**
 ```
 /home/jithendra/projects
 ```
