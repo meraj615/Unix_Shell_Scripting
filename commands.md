@@ -906,3 +906,192 @@ Ctrl + v
 ```bash
 :!pwd
 ```
+
+
+### grep – Search Text in Files ###
+
+### `grep`
+**Purpose:** Searches for a pattern in a file and displays matching lines.
+
+```bash
+grep pattern file_name
+```
+**Output:** 
+```
+This line contains pattern
+```
+
+### `grep -i`
+**Purpose:** Performs a case-insensitive search.
+
+```bash
+grep -i pattern file_name
+```
+**Output:** 
+```
+Pattern found in this line
+```
+
+
+### `grep -r`
+**Purpose:** Searches recursively in all files under the current directory.
+
+```bash
+grep -r pattern .
+```
+**Output:** 
+```
+./file1:pattern found here
+./dir1/file2:another pattern
+```
+
+
+### `grep -n`
+**Purpose:** Displays matching lines with line numbers.
+
+```bash
+grep -n pattern file_name
+```
+**Output:** 
+```
+12:This line contains pattern
+```
+
+### `grep -v`
+**Purpose:** Displays lines that do NOT contain the pattern.
+```bash
+grep -v pattern file_name
+```
+**Output:** 
+```
+This line does not match
+Another unrelated line
+```
+
+
+### `grep -w`
+**Purpose:** Matches the exact word only.
+
+```bash
+grep -w pattern file_name
+```
+**Output:** 
+```
+pattern
+```
+
+### `grep -c`
+**Purpose:** Counts the number of matching lines.
+
+```bash
+grep -c pattern file_name
+```
+**Output:** 
+```
+3
+```
+
+
+### `grep -l`
+**Purpose:** Displays file names that contain the pattern.
+
+```bash
+grep -l pattern *
+```
+**Output:** 
+```
+file1
+file3
+```
+
+
+### `grep -H`
+**Purpose:** Displays the file name with matching lines.
+
+```bash
+grep -H pattern file_name
+```
+**Output:** 
+```
+file_name:This line contains pattern
+```
+
+### `grep -o`
+**Purpose:** Displays only the matched part of the line.
+```bash
+grep -o pattern file_name
+```
+**Output:** 
+```
+pattern
+```
+
+
+### `grep -E`
+**Purpose:** Searches using extended regular expressions.
+
+```bash
+grep -E "pat1|pat2" file_name
+```
+**Output:** 
+```
+This line has pat1
+This line has pat2
+```
+
+### `grep -F`
+**Purpose:** Searches for a fixed string (no regex interpretation).
+
+```bash
+grep -F "fixed_string" file_name
+```
+**Output:** 
+```
+fixed_string found here
+```
+
+
+### `grep -A`
+**Purpose:** Displays matching lines and 3 lines after the match.
+
+```bash
+grep -A 3 pattern file_name
+```
+**Output:** 
+```
+This line contains pattern
+Next line
+Next line
+Next line
+```
+
+### `grep -B`
+**Purpose:** Displays matching lines and 3 lines before the match.
+```bash
+grep -B 3 pattern file_name
+```
+**Output:** 
+```
+Previous line
+Previous line
+Previous line
+This line contains pattern
+```
+
+
+### `grep -C`
+**Purpose:** Displays matching lines with 3 lines before and after.
+
+```bash
+grep -C 3 pattern file_name
+```
+**Output:** 
+```
+Previous line
+Previous line
+Previous line
+This line contains pattern
+Next line
+Next line
+Next line
+```
