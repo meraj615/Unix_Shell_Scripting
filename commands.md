@@ -95,3 +95,86 @@ Move one level up
 ```
 Go to home directory.
 ```
+
+### `cd /home`
+**Purpose:**
+``` bash
+Moves to the /home directory
+```
+
+### `cd -`
+**Purpose:**
+``` bash
+Switches back to the previous working directory
+```
+
+#### Listing Files & Directories ######
+### `ls`
+**Purpose:** 
+
+```bash
+Lists files and directories in the current directory.
+```
+### `ls -l`
+**Purpose:** Lists files and directories in long format (permissions, owner, size, date).
+
+```bash
+ls -l
+```
+**Output:** 
+```
+  -rw-r--r-- 1 user user  4096 Jan 13  data.csv
+  drwxr-xr-x 2 user user  4096 Jan 12  logs
+
+```
+### `ls -a`
+**Purpose:** 
+
+```bash
+Lists all files, including hidden files (files starting with .).
+```
+
+### `ls -lh`
+**Purpose:** 
+
+```bash
+Lists files in long format with human-readable file sizes (KB, MB, GB).
+```
+
+### `ls -ltr`
+**Purpose:** 
+
+```bash
+Lists files in long format, sorted by modification time (oldest first).
+```
+
+### `ls -ltrh`
+**Purpose:** 
+
+```bash
+Lists files in long format, sorted by time, with human-readable sizes
+```
+
+### `ls -ltra`
+**Purpose:** 
+
+```bash
+Lists all files (including hidden) in long format, sorted by time.
+```
+
+### Directory Creation & Removal ###
+
+### `mkdir`
+**Purpose:** Creates a new directory.
+
+```bash
+mkdir dir_name
+```
+
+### `rmdir`
+**Purpose:** Removes an empty directory.
+
+```bash
+rmdir dir_name
+```
+
