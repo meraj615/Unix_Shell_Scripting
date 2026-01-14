@@ -21,7 +21,7 @@ whoami
 ```
 **Output:**
 ```
-jithendra
+meraj
 ```
 
 ### `hostname`
@@ -69,51 +69,52 @@ pwd
 ```
 **Output:**
 ```
-/home/jithendra/projects
+/home/meraj/projects
 ```
 
 ### `cd`
-**Purpose:**
-```
-Moves to home directory
+**Purpose:** Moves to home directory
+```bash
+cd
 ```
 
+
 ### `cd .`
-**Purpose:**
-```
-Stay in the same directory (no change).
+**Purpose:** Stay in the same directory (no change).
+```bash
+cd .
 ```
 
 ### `cd ..`
-**Purpose:**
+**Purpose:**Move one level up
 ```
-Move one level up
+cd ..
 ```
 
 ### `cd ~`
-**Purpose:**
+**Purpose:** Go to home directory.
 ```
-Go to home directory.
+cd ~
 ```
 
 ### `cd /home`
-**Purpose:**
+**Purpose:** Moves to the /home directory
 ``` bash
-Moves to the /home directory
+cd /home
 ```
 
 ### `cd -`
-**Purpose:**
+**Purpose:** Switches back to the previous working directory
 ``` bash
-Switches back to the previous working directory
+cd -
 ```
 
 #### Listing Files & Directories ######
 ### `ls`
-**Purpose:** 
+**Purpose:** Lists files and directories in the current directory.
 
 ```bash
-Lists files and directories in the current directory.
+ls
 ```
 ### `ls -l`
 **Purpose:** Lists files and directories in long format (permissions, owner, size, date).
@@ -128,38 +129,38 @@ ls -l
 
 ```
 ### `ls -a`
-**Purpose:** 
+**Purpose:** Lists all files, including hidden files (files starting with .).
 
 ```bash
-Lists all files, including hidden files (files starting with .).
+ls -a
 ```
 
 ### `ls -lh`
-**Purpose:** 
+**Purpose:** Lists files in long format with human-readable file sizes (KB, MB, GB).
 
 ```bash
-Lists files in long format with human-readable file sizes (KB, MB, GB).
+ls -lh
 ```
 
 ### `ls -ltr`
-**Purpose:** 
+**Purpose:** Lists files in long format, sorted by modification time (oldest first).
 
 ```bash
-Lists files in long format, sorted by modification time (oldest first).
+ls -ltr
 ```
 
 ### `ls -ltrh`
-**Purpose:** 
+**Purpose:** Lists files in long format, sorted by time, with human-readable sizes 
 
 ```bash
-Lists files in long format, sorted by time, with human-readable sizes
+ls -ltrh
 ```
 
 ### `ls -ltra`
-**Purpose:** 
+**Purpose:** Lists all files (including hidden) in long format, sorted by time.
 
 ```bash
-Lists all files (including hidden) in long format, sorted by time.
+ls -ltra
 ```
 
 ### Directory Creation & Removal ###
