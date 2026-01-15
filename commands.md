@@ -24,6 +24,28 @@ whoami
 meraj
 ```
 
+### `who`
+**Purpose:** Displays users currently logged into the system.
+
+```bash
+who
+```
+**Output:**
+```
+meraj pts/0  2026-01-13 10:05
+```
+
+### `id`
+**Purpose:** Displays user ID, group ID, and group memberships.
+
+```bash
+id
+```
+**Output:**
+```
+uid=1000(meraj) gid=1000(meraj) groups=1000(meraj)
+```
+
 ### `hostname`
 **Purpose:** Shows the system’s host name.
 
@@ -45,6 +67,21 @@ date
 **Output:*** 
 ```
 Tue Jan 13 14:05:22 EST 2026
+```
+
+### `cal`
+
+**Purpose:** Displays the current month calendar.
+
+```bash
+cal
+```
+**Output:*** 
+```
+    January 2026
+Su Mo Tu We Th Fr Sa
+         1  2  3
+ 4  5  6  7  8  9 10
 ```
 
 ### `uptime`
@@ -1578,4 +1615,91 @@ chown user:group file_name
 chgrp group file_name
 ```
 
+### ps – Process Status ###
 
+### `ps`
+**Purpose:** Displays processes running in the current shell.
+```bash
+ps
+```
+**Output:** 
+```
+PID TTY          TIME CMD
+1234 pts/0    00:00:00 bash
+1250 pts/0    00:00:00 ps
+```
+
+### `ps -ef`
+**Purpose:** Displays all running processes in full-format listing.
+
+```bash
+ps -ef
+```
+**Output:** 
+```
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Jan13 ?        00:00:02 systemd
+user      1234  1200  0 Jan13 pts/0    00:00:00 bash
+```
+
+### `ps aux`
+**Purpose:** Displays all processes with CPU and memory usage.
+```bash
+ps aux
+```
+**Output:** 
+```
+USER   PID %CPU %MEM    VSZ   RSS TTY STAT START TIME COMMAND
+user  1234  0.0  0.1  10500  2100 pts/0 S    10:00 0:00 bash
+```
+
+
+### kill – Terminate Processes ###
+
+### `kill`
+**Purpose:** Sends a termination signal to a process.
+```bash
+kill pid
+```
+
+### `kill -9`
+**Purpose:** Forcefully terminates a process.
+```bash
+kill -9 pid
+```
+
+### Help & History Commands ###
+### `man`
+**Purpose:** Displays the manual page for a command.
+```bash
+man command_name
+```
+
+**Output:** 
+```
+Opens the manual page in a pager (no direct terminal output)
+```
+
+### `history`
+**Purpose:** Displays previously executed commands.
+```bash
+history
+```
+
+**Output:** 
+```
+  1 ls
+  2 pwd
+  3 cat file_name
+```
+
+### `clear`
+**Purpose:** Clears the terminal screen.
+```bash
+clear
+```
+
+**Output:** 
+```
+No output
+```
