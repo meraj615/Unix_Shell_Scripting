@@ -1386,4 +1386,196 @@ awk '{sum+=$1} END {print sum}' file_name
 150
 ```
 
+### cut – Extract Sections from Each Line ###
+
+### `cut -d',' -f1`
+**Purpose:** Extracts the first field using comma as the delimiter.
+
+```bash
+cut -d',' -f1 file_name
+```
+**Output:** 
+```
+John
+Alice
+Mark
+```
+
+### `cut -c1-5`
+**Purpose:** Extracts characters from position 1 to 5.
+
+```bash
+cut -c1-5 file_name
+```
+**Output:** 
+```
+Hello
+World
+```
+
+### sort – Sort Lines of Text ###
+
+### `sort`
+**Purpose:** Sorts file content in ascending (alphabetical) order.
+
+```bash
+sort file_name
+```
+**Output:** 
+```
+Alice
+John
+Mark
+```
+
+### `sort -r`
+**Purpose:** Sorts file content in reverse order.
+
+```bash
+sort -r file_name
+```
+**Output:** 
+```
+Mark
+John
+Alice
+```
+
+### `sort -n`
+**Purpose:** Sorts numbers in numeric order.
+
+```bash
+sort -n file_name
+```
+**Output:** 
+```
+10
+25
+100
+```
+
+
+### uniq – Filter Adjacent Duplicate Lines ###
+### uniq works correctly only on sorted files ###
+
+### `uniq`
+**Purpose:** Removes adjacent duplicate lines.
+
+```bash
+uniq file_name
+```
+**Output:** 
+```
+Apple
+Banana
+Orange
+```
+
+### `uniq -c`
+**Purpose:** Counts occurrences of each line.
+
+```bash
+uniq -c file_name
+```
+**Output:** 
+```
+2 Apple
+1 Banana
+3 Orange
+```
+
+### `uniq -d`
+**Purpose:** Displays only duplicate lines.
+
+```bash
+uniq -d file_name
+```
+**Output:** 
+```
+Apple
+Orange
+```
+
+### wc – Word, Line, and Character Count ###
+
+### `wc`
+**Purpose:** Displays line, word, and byte counts.
+```bash
+wc file_name
+```
+**Output:** 
+```
+ 10  50  300 file_name
+```
+
+### `wc -l`
+**Purpose:** Displays number of lines.
+
+```bash
+wc -l file_name
+```
+**Output:** 
+```
+10
+```
+
+### `wc -w`
+**Purpose:** Displays number of words.
+```bash
+wc -w file_name
+```
+**Output:** 
+```
+ 50
+```
+
+### `wc -c`
+**Purpose:** Displays number of bytes (characters).
+
+```bash
+wc -c file_name
+```
+**Output:** 
+```
+300
+```
+
+### chmod – Change File Permissions ###
+
+### `chmod 755`
+
+**Purpose:** Sets permissions to rwxr-xr-x
+Owner: read, write, execute
+Group: read, execute
+Others: read, execute
+
+```bash
+chmod 755 file_name
+```
+
+
+### `chmod u+x`
+**Purpose:** Adds execute permission to the file owner.
+
+```bash
+chmod u+x file_name
+```
+
+### chown – Change File Ownership ###
+
+### `chown user:group`
+**Purpose:** Changes both owner and group of a file.
+```bash
+chown user:group file_name
+```
+
+### chgrp – Change Group Ownership ###
+
+### `chgrp group`
+**Purpose:** Changes the group ownership of a file.
+
+```bash
+chgrp group file_name
+```
+
 
