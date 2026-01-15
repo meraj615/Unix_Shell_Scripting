@@ -1,5 +1,5 @@
-#### `Basic Commands For Linux/Commands for the Data Engineer` #########
-#### `System Information Commands` ######
+#### Basic Commands For Linux/Commands for the Data Engineer #########
+#### System Information Commands ######
 
 ### `uname`
 **Purpose:** Shows complete system information (kernel, OS, architecture).
